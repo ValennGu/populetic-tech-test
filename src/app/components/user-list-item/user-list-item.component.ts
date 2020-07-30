@@ -7,12 +7,11 @@ import { User } from 'src/app/models/user.model';
     styleUrls: ['./user-list-item.component.scss']
 })
 export class UserListItemComponent implements OnInit {
-    @Input() user: User;
+    // @Input() user: User;
     public listPosition: number = 0;
 
     constructor() { }
 
     ngOnInit(): void {
     }
-
 }

@@ -1,0 +1,31 @@
+<div *ngIf="user; else loader">
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 mt-5">
+            <h1>{{user.firstName}} , {{user.lastName}}</h1>
+            <p>{{user.email}}</p>
+            <hr>
+            <h4>Posts Made </h4>
+            <div *ngIf="postsList; else loaderPosts" class="d-flex justify-content-between flex-wrap">
+                <div class="card mb-3" style="width: 18rem;" *ngFor="let post of postsList.data">
+                    <img [src]="post.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">{{post.text}}</p>
+                        <div class="like-icon">
+                            <div class="like-text">{{post.likes}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #loaderPosts>
+                <app-loader [loaderType]="'regular'"></app-loader>
+            </ng-template>
+            <hr>
+            <div class="d-flex justify-content-center mb-5">
+                <button class="btn btn-primary" (click)="goHome()">Return Home</button>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #loader>
+    <app-loader [loaderType]="'regular'"></app-loader>
+</ng-template>

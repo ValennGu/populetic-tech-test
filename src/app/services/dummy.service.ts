@@ -12,7 +12,7 @@ import { TagList } from '../models/tag.model';
 export class DummyService {
 
     private dummyApiUrl: string = 'https://dummyapi.io/data/api';
-    private apiHttpHeader: HttpHeaders = new HttpHeaders().set('app-id', 'oa6ve5fEwayH4X6Q9tRi')
+    private apiHttpHeader: HttpHeaders = new HttpHeaders().set('app-id', 'zKWtqQRL1vvJSKnagvDZ')
 
     constructor(
         private http: HttpClient
